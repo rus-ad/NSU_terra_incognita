@@ -1,7 +1,7 @@
 # Labyrinth
 
 **Before starting the game, you need to run on the command line:**
-1. git clone "somelink" && cd terra_incognita
+1. git clone https://github.com/rus-ad/terra_incognita.git && cd terra_incognita
 2. python -m venv venv
 3. venv\Scripts\activate.bat
 4. pip install -r requirements.txt
