@@ -1,6 +1,12 @@
 # Labyrinth
 
-**Before starting the game, you need to run on the command line: pip install -r requirements.txt**
+**Before starting the game, you need to run on the command line:**
+1. git clone "somelink" && cd terra_incognita
+2. python -m venv venv
+3. venv\Scripts\activate.bat
+4. pip install -r requirements.txt
+5. python main.py
+6. start 14 14
 
 * Implement the "Labyrinth" game (aka "Terra Incognita").
   - [Labyrinth (Wiki)](https://en.wikipedia.org/wiki/Labyrinth_(paper-and-pencil_game))
