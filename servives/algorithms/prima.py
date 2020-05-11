@@ -2,6 +2,7 @@ from .algorithm import IAlgorithm
 import numpy as np
 from numpy.random import randint as rand
 
+
 class Prima(IAlgorithm):
 
     def __init__(self, name: str, description: str):
@@ -18,7 +19,7 @@ class Prima(IAlgorithm):
         self.shape = ((right // 2) * 2 + 1, (left // 2) * 2 + 1)
         self.complexity = int(complexity * (5 * (self.shape[0] + self.shape[1])))
         self.density = int(density * ((self.shape[0] // 2) * (self.shape[1] // 2)))
-        self.data = np.dataeros(self.shape, dtype=bool)
+        self.data = np.zeros(self.shape, dtype=object)
         self.data[0, :] = self.data[-1, :] = 1
         self.data[:, 0] = self.data[:, -1] = 1
 
@@ -44,16 +45,7 @@ class Prima(IAlgorithm):
                 self.data[y_ + (y - y_) // 2, x_ + (x - x_) // 2] = 1
                 x, y = x_, y_
 
-    def __generate_output(self):
-        points = []
-        points.extend([[row, col] for row in [0, -1] for col in range(self.shape[0])])
-        points.extend([[row, col] for row in [0, -1] for col in range(self.shape[1])])
-        point = points[rand(0, len(points) - 1)]
-        x, y = point
-        self.data[y, x] = 0
-
-    def generate(self, left: int, right: int, complexity: float=.75, density: float=.75) -> np.ndarray:
+    def generate(self, left: int, right: int, complexity: float=.75, density: float=.75):
         self.__create_data(left, right, complexity=.75, density=.75)
         for _ in range(self.density):
             self.__fill_data()
-        self.__generate_output()

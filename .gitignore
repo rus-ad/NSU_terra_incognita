@@ -2,3 +2,8 @@
 /.idea
 /impl/__pycache__/
 /servives/__pycache__/
+/save
+/image_of_labyrinth.png
+/__pycache__/
+/servives/algorithms/__pycache__/
+/servives/maze_objects/__pycache__/
