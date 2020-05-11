@@ -1,6 +1,6 @@
 # Labyrinth
 
-** Before starting the game, you need to run on the command line: pip install -r requirements.txt **
+**Before starting the game, you need to run on the command line: pip install -r requirements.txt**
 
 * Implement the "Labyrinth" game (aka "Terra Incognita").
   - [Labyrinth (Wiki)](https://en.wikipedia.org/wiki/Labyrinth_(paper-and-pencil_game))
